@@ -1,0 +1,689 @@
+/* CSS timeline */
+
+:root{
+    --font: 'ibm-plex-sans', helvetica, sans-serif;
+    --line-height: 16px;
+    --baseline: 20px;
+    --margin: 20px;
+    --color-1: rgb(9, 186, 181);
+    --color-2: rgb(59, 204, 200);
+    --color-3: rgb(104, 217, 215);
+    --color-4: rgb(152, 235, 232);
+    --color-5: rgb(193, 243, 241);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+
+/* Natural box model */
+*, *:before, *:after {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+
+@media print{
+    @page { size: 2318mm 600mm; }
+}
+
+
+/* background  ---------------------------------------------------------------- */
+
+
+#page{
+    height: 600mm;
+    width: 2318mm;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#page img{
+    width: 2318mm;
+}
+
+
+
+
+/* GRID  ---------------------------------------------------------------- */
+
+#timeline {
+    --year-unit: 40px;
+    height: 600mm;
+    width: 2318mm;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    /* background: linear-gradient( transparent 0%, PaleTurquoise 19px, #999 19px,  #999 20px), PaleTurquoise;
+    background: linear-gradient( transparent 0%, transparent 19px, #999 19px,  #999 20px), transparent;
+    background-size: 100% 20px;
+    background-repeat: repeat-y;
+    background-position-y: -2px; */
+    grid-template-columns: 20px /* margin */
+    calc(var(--year-unit)*1) /* 1963 */ 
+    calc(var(--year-unit)*1) /* 1964 */
+    calc(var(--year-unit)*1) /* 196- */ 
+    calc(var(--year-unit)*1) /* 1969 */ 
+    calc(var(--year-unit)*1) /* 1970 */ 
+    calc(var(--year-unit)*1) /* 1971 */ 
+    calc(var(--year-unit)*1) /* 1972 */ 
+    calc(var(--year-unit)*1) /* 1973 */
+    calc(var(--year-unit)*1) /* 1974 */
+    calc(var(--year-unit)*1) /* 1975 */
+    calc(var(--year-unit)*2) /* 1976 */ 
+    calc(var(--year-unit)*2) /* 1977 */
+    calc(var(--year-unit)*2) /* 1978 */ 
+    calc(var(--year-unit)*2) /* 1979 */ 
+    calc(var(--year-unit)*2) /* 1980 */ 
+    calc(var(--year-unit)*2) /* 1981 */ 
+    calc(var(--year-unit)*2) /* 1982 */ 
+    calc(var(--year-unit)*2) /* 1983 */ 
+    calc(var(--year-unit)*3) /* 1984 */ 
+    calc(var(--year-unit)*3) /* 1985 */ 
+    calc(var(--year-unit)*3) /* 1986 */ 
+    calc(var(--year-unit)*3) /* 1987 */ 
+    calc(var(--year-unit)*3) /* 1988 */ 
+    calc(var(--year-unit)*3) /* 1989 */ 
+    calc(var(--year-unit)*3) /* 1990 */ 
+    calc(var(--year-unit)*6) /* 1991 */
+    calc(var(--year-unit)*6) /* 1992 */
+    calc(var(--year-unit)*6) /* 1993 */
+    calc(var(--year-unit)*6) /* 1994 */
+    calc(var(--year-unit)*6) /* 1995 */
+    calc(var(--year-unit)*6) /* 1996 */
+    calc(var(--year-unit)*6) /* 1997 */
+    calc(var(--year-unit)*6) /* 1998 */
+    calc(var(--year-unit)*6) /* 1999 */
+    calc(var(--year-unit)*6) /* 2000 */
+    calc(var(--year-unit)*6) /* 2001 */
+    calc(var(--year-unit)*6) /* 2002 */
+    calc(var(--year-unit)*6) /* 2003 */
+    calc(var(--year-unit)*6) /* 2004 */
+    calc(var(--year-unit)*6) /* 2005 */
+    calc(var(--year-unit)*6) /* 2006 */
+    calc(var(--year-unit)*6) /* 2007 */
+    calc(var(--year-unit)*6) /* 2008 */
+    calc(var(--year-unit)*6) /* 2009 */
+    calc(var(--year-unit)*6) /* 2010 */
+    calc(var(--year-unit)*6) /* 2011 */
+    calc(var(--year-unit)*6)/* 2012 */
+    calc(var(--year-unit)*6) /* 2013 */
+    calc(var(--year-unit)*6) /* 2014 */
+    calc(var(--year-unit)*6) /* 2015 */
+    calc(var(--year-unit)*6) /* 2016 */
+    calc(var(--year-unit)*6) /* 2017 */
+    calc(var(--year-unit)*6) /* 2018 */
+    calc(var(--year-unit)*6) /* 2019 */
+    calc(var(--year-unit)*6) /* 2020 */
+    calc(var(--year-unit)*6) /* 2021 */
+    calc(var(--year-unit)*6) /* 2022 */
+    calc(var(--year-unit)*6) /* 2023 */
+
+
+    122px;
+    grid-template-rows: 84px /* years */
+    calc(var(--baseline)*9) /* section-hardware */
+    calc(var(--baseline)*4) /* section-platform */
+    calc(var(--baseline)*16) /* software-browser + software-ebook */
+    calc(var(--baseline)*10) /* software-publishing */
+    calc(var(--baseline)*7) /* section-word */
+    calc(var(--baseline)*10) /* web-based-technology */
+    calc(var(--baseline)*18) /* section-format */
+    calc(var(--baseline)*9) /* section-w3C */
+    calc(var(--baseline)*9) /* html  */
+    calc(var(--baseline)*7) /* css  */
+    calc(var(--baseline)*9) /* epub */;
+    z-index: 10;
+}
+
+.section-title{ grid-column: 1; }
+.y1963 { grid-column: 2; }
+.y1964 { grid-column: 3; }
+.y196- { grid-column: 4; }
+.y1969 { grid-column: 5; }
+.y1970 { grid-column: 6; }
+.y1971 { grid-column: 7; }
+.y1972 { grid-column: 8; }
+.y1973 { grid-column: 9; }
+.y1974 { grid-column: 10; }
+.y1975 { grid-column: 11; }
+.y1976 { grid-column: 12; }
+.y1977 { grid-column: 13; }
+.y1978 { grid-column: 14; }
+.y1979 { grid-column: 15; }
+.y1980 { grid-column: 16; }
+.y1981 { grid-column: 17; }
+.y1982 { grid-column: 18; }
+.y1983 { grid-column: 19; }
+.y1984 { grid-column: 20; }
+.y1985 { grid-column: 21; }
+.y1986 { grid-column: 22; }
+.y1987 { grid-column: 23; }
+.y1988 { grid-column: 24; }
+.y1989 { grid-column: 25; }
+.y1990 { grid-column: 26; }
+.y1991 { grid-column: 27; }
+.y1992 { grid-column: 28; }
+.y1993 { grid-column: 29; }
+.y1994 { grid-column: 30; }
+.y1995 { grid-column: 31; }
+.y1996 { grid-column: 32; }
+.y1997 { grid-column: 33; }
+.y1998 { grid-column: 34; }
+.y1999 { grid-column: 35; }
+.y2000 { grid-column: 36; }
+.y2001 { grid-column: 37; }
+.y2002 { grid-column: 38; }
+.y2003 { grid-column: 39; }
+.y2004 { grid-column: 40; }
+.y2005 { grid-column: 41; }
+.y2006 { grid-column: 42; }
+.y2007 { grid-column: 43; }
+.y2008 { grid-column: 44; }
+.y2009 { grid-column: 45; }
+.y2010 { grid-column: 46; }
+.y2011 { grid-column: 47; }
+.y2012 { grid-column: 48; }
+.y2013 { grid-column: 49; }
+.y2014 { grid-column: 50; }
+.y2015 { grid-column: 51; }
+.y2016 { grid-column: 52; }
+.y2017 { grid-column: 53; }
+.y2018 { grid-column: 54; }
+.y2019 { grid-column: 55; }
+.y2020 { grid-column: 56; }
+.y2021 { grid-column: 57; }
+.y2022 { grid-column: 58; }
+.y2023 { grid-column: 59; }
+
+
+
+section.y1963{ margin-left: 5px; }
+
+
+.year { grid-row: 1 / 13;  }
+#title-year { grid-row: 1 }
+.section-hardware, #section-1 { grid-row: 2 }
+.section-platform { grid-row: 3 }
+.software-browser, #section-2 { grid-row: 4 }
+.software-ebook { grid-row: 4 }
+.software-publishing, #section-3 { grid-row: 5 }
+.section-word, #section-4 { grid-row: 6 }
+.web-based-technology, #section-5{ grid-row: 7 }
+.section-format { grid-row: 8 }
+.format-w3c { grid-row: 9 }
+.format-html { grid-row: 10 }
+.format-css { grid-row: 11 }
+.section-epub, #section-6{ grid-row: 12 }
+
+
+/* Credits ---------------------------------------------------------- */
+
+#credits{
+    background-color: white;
+    position: absolute;
+    top: calc(600mm - 20mm);
+    left: 0;
+    width: 2318mm;
+    height: 20mm;
+    z-index: 300;
+    padding-top: 5mm;
+    padding-left: 5mm;
+    display: flex;
+    justify-content: space-between;
+}
+
+#credits div{
+    margin-right: 10mm;
+}
+
+#credits h1{ 
+    font-family: var(--font);
+    font-size: 26px;
+}
+
+#credits a{
+    font-family: var(--font);
+    font-size: 10px;
+    line-height: 0;
+}
+
+#credits a:first-of-type{
+    position: relative;
+    top: 5px;
+    margin-right: 20px;
+}
+
+/* Style for years elements  ---------------------------------------------------------- */
+
+.year{
+    border-left: 0.5pt dashed #daf8f7;
+    border-left: 0.5pt dashed #888;
+    z-index: 0;
+    opacity: 0.75;
+    width: 400px;
+}
+
+.year h1 {
+    color: #daf8f7;
+    color: black;
+    text-align: left;
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0;
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    position: relative;
+    top: 45px;
+}
+
+/* Style for section title  ---------------------------------------------------------- */
+
+.section-title{
+    font-family: var(--font);
+    font-size: 11px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    line-height: 24px;
+    margin-left: 18px;
+    z-index: 100;
+}
+
+.section-title h1{
+    font-weight: 600;
+}
+
+#section-1{
+    width: 170px;
+    margin-top: 200px;
+    background-color: var(--color-3);
+    color: var(--color-1);
+}
+
+#section-2{
+    width: 125px;
+    background-color: var(--color-4);
+    color: var(--color-2); 
+    margin-top: 135px;
+}
+
+#section-3{
+    width: 140px;
+    background-color: var(--color-5);
+    color: var(--color-3); 
+    margin-top: 125px;
+}
+
+#section-4{
+    width: 200px;
+    background-color: var(--color-2);
+    color: var(--color-4); 
+    margin-top: 200px;
+}
+
+#section-5{
+    grid-column: 54!important;
+    width: 160px;
+    background-color: var(--color-2);
+    color: var(--color-5);
+    margin-top: 160px;
+    margin-left: 160px; 
+}
+
+#section-6{
+    
+    width: 160px;
+    background-color: var(--color-2);
+    color: var(--color-5); 
+}
+
+/* Style for timeline element  ---------------------------------------------------------- */
+
+article {
+    width: 600px;
+    padding-left: calc(var(--baseline)*1);
+    z-index: 100;
+}
+
+article h2, #legende li { 
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: var(--line-height);
+    padding-bottom: 1px;
+    text-indent: -15px;
+}
+
+/* paragraphes */
+article p {
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    /* margin-left: 14px; */
+    padding-top: 1px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+}
+
+article h2::before{
+    content: "⚬";
+    position: relative;
+    padding-right: 5px;
+}
+
+/* .typo h2::before{
+    content: "▃"!important;
+}
+
+.epub h2::before {
+    content: "●"!important;
+}
+
+.web h2::before, .css h2::before {
+    content: "◆"!important;
+}
+
+.html h2::before {
+    content: "◇"!important;
+}
+
+.page h2::before{
+    content: "◼"!important;
+
+}   */
+
+
+
+
+
+
+/* VERTICAL RYTHM ------------------------------------------------ */
+
+
+#timeline{
+--pos-2: calc(var(--baseline)*2 + var(--margin));
+--pos-3: calc(var(--baseline)*4 + var(--margin)*2);
+--pos-4: calc(var(--baseline)*6 + var(--margin)*3);
+--pos-5: calc(var(--baseline)*8 + var(--margin)*4);
+--pos-6: calc(var(--baseline)*10 + var(--margin)*5);
+--pos-7: calc(var(--baseline)*12 + var(--margin)*6);
+--pos-8: calc(var(--baseline)*14 + var(--margin)*7);
+}
+
+/* harware */
+#ocr{ margin-top: var(--pos-2);}
+#ibm-5100{ margin-top: var(--pos-3);}
+#apple-1977{ margin-top: var(--pos-4); }
+#cd{ margin-top: var(--pos-2);}
+#gnu-project{ margin-top: var(--pos-3);}
+#laser-writer{ margin-top: var(--pos-2);}
+/* #multi-touch{  margin-top: calc(var(--baseline)*2);} */
+#windows{ margin-top: var(--pos-4); }
+#gyricon{ margin-top: var(--pos-2);}
+#trafford{ margin-top: var(--pos-3);}
+/* #nokia-communicator{ margin-top: var(--pos-2);} */
+#usb{ margin-top: var(--pos-3);}
+#palm-pilot, #blackberry, #cybook{ margin-top: var(--pos-2);}
+/* #softbook{ margin-top: var(--pos-2);} */
+#librie{ margin-top: var(--pos-2);}
+#kindle{ margin-top: var(--pos-2);} 
+#android{ margin-top: var(--pos-3);} 
+#espresso{ margin-top: var(--pos-4);}
+#ipad{ margin-top: var(--pos-2);}
+#bookman{ margin-top: var(--pos-2);}
+#raspberry{ margin-top: var(--pos-3);}
+
+
+/* platform */
+/* #arxiv { margin-top: calc(var(--baseline)*2);} */
+#abu { position: relative; top: calc(var(--pos-2)*-1); }
+#website-1991 { position: relative; top: calc(var(--baseline)*-2); }
+#gallica { position: relative; top: calc(var(--pos-2)*-1); }
+#wayback-machine { margin-top: var(--pos-2);}
+#lulu { position: relative; top: calc(var(--pos-2)*-1); }
+#google-books { margin-top: var(--pos-2);}
+#oca { margin-top: var(--pos-2);}
+#scribd{ margin-top: var(--pos-2);}
+
+#europeana { position: relative; top: calc(var(--pos-3)*-1); }
+#hathi { position: relative; top: calc(var(--pos-2)*-1); }
+
+
+
+/* software-browser */
+#hyper-card { margin-top: var(--pos-2);}
+#line-mode { margin-top: var(--pos-2);}
+#viola { margin-top: var(--pos-3);}
+#erwise { margin-top: var(--pos-4);}
+#lynx { margin-top: var(--pos-5);}
+#arena { margin-top: var(--pos-6);}
+#netscape { margin-top: var(--pos-3);}
+#ie-1997  { margin-top: var(--pos-2);}
+#opera-1995 { margin-top: var(--pos-2);}
+#konqueror, #konqueror-khtml { margin-top: var(--pos-3);}
+#firefox { margin-top: var(--pos-2);}
+#opera-2005 { margin-top: var(--pos-3);}
+/* #chrome-2008 { margin-top: var(--pos-2);} */
+#chromium { margin-top: var(--pos-2);}
+#ie-2009{ margin-top: var(--pos-3);}
+#pale-moon{ margin-top: var(--pos-5);}
+#opera-2013{ margin-top: var(--pos-3);}
+#phantom{ margin-top: var(--pos-5);}
+#ie-2013{ margin-top: var(--pos-2);}
+#edge, #quantum{ position: relative; top: calc(var(--pos-2)*-1); }
+#beaker{ margin-top: var(--pos-3);}
+#vivaldi{ margin-top: var(--pos-4);}
+
+/* software ebook */
+#acrobat-reader{ margin-top: var(--pos-2);}
+#calibre{ margin-top: var(--pos-2);}
+#sumatra{ margin-top: var(--pos-3);}
+/* #ibooks{ margin-top: var(--pos-2);} */
+#bluefire{ margin-top: var(--pos-2);}
+#mantano{ margin-top: var(--pos-3);}
+#digital-edition-adobe{ margin-top: var(--pos-4);}
+#readium{ position: relative; top: calc(var(--pos-2)*-1); }
+#lisa{ margin-top: var(--pos-2);}
+
+#falsh-player{ margin-top: var(--pos-4);}
+#mobipoxket-reader{ margin-top: var(--pos-2);}
+#ebook-reader{ margin-top: var(--pos-3);}
+#phoenix{ margin-top: var(--pos-2);}
+#safari  { margin-top: var(--pos-3);}
+#opera-2003{ margin-top: var(--pos-5);}
+#acrobat-2002{ margin-top: var(--pos-4);}
+
+/* software publishing */
+
+#bravo{ position: relative; top: calc(var(--pos-2)*-2); }
+#document-composition-facility{ position: relative; top: calc(var(--pos-2)*-1); }
+#latex{ position: relative; top: calc(var(--pos-2)*-2); }
+#ready-set-go{ position: relative; top: calc(var(--pos-2)*-1); }
+/* #page-maker{ margin-top: var(--pos-3);} */
+#ventura{ margin-top: var(--pos-2);}
+#quark-xpress{ position: relative; top: calc(var(--pos-2)*-2); }
+#ghostscript{ position: relative; top: calc(var(--pos-2)*-1); }
+#timeworks{ margin-top: var(--pos-3);}
+#microsoft-publisher{ margin-top: var(--pos-2);}
+
+#page-mill{ position: relative; top: calc(var(--pos-2)*-1); }
+/* #hotmetal{ margin-top: var(--pos-2);} */
+#in-page{ margin-top: var(--pos-2);}
+#front-page{ position: relative; top: calc(var(--pos-2)*-1); }
+#framemaker{ margin-top: var(--pos-3);}
+#lyx{ margin-top: var(--pos-4);}
+/* #flash-1996{ position: relative; top: calc(var(--pos-2)*-1); } */
+#amaya{ margin-top: var(--pos-2);}
+#dreamweaver{ position: relative; top: calc(var(--pos-2)*-1); }
+#flash-2005{ margin-top: var(--pos-2);}
+#django{ position: relative; top: calc(var(--pos-2)*-1); }
+/* #kompozer{ margin-top: var(--pos-2);} */
+#coda{ margin-top: var(--pos-2);}
+#mambo{ margin-top: var(--pos-3);}
+#jeckyll{ position: relative; top: calc(var(--pos-2)*-1); }
+#sigil{ position: relative; top: calc(var(--pos-2)*-1); }
+/* #typekit{ margin-top: var(--pos-2);} */
+#i-studio{ margin-top: var(--pos-2);}
+#writer2epub{ margin-top: var(--pos-3);}
+#booksmart{ position: relative; top: calc(var(--pos-2)*-1); }
+#ibooks-author{ position: relative; top: calc(var(--pos-3)*-1); }
+#hugo{ position: relative; top: calc(var(--pos-2)*-1); }
+/* #booktype{ margin-top: var(--pos-3);} */
+#playwrite{ margin-top: var(--pos-2);}
+#indesign-2014{ position: relative; top: calc(var(--pos-3)*-1); }
+
+
+
+/* word preocessor */
+#emacs{ margin-top: var(--pos-2);}
+/* #word-perfect{ margin-top: var(--pos-3);} */
+#worstar{ margin-top: var(--pos-2);}
+#rcs{ margin-top: var(--pos-3);}
+#macwrite{ margin-top: var(--pos-2);}
+#vim{ margin-top: var(--pos-2);}
+#gedit{ margin-top: var(--pos-2);}
+#gnu-nano{ margin-top: var(--pos-3);}
+#apache-subversion{ margin-top: var(--pos-4);}
+#wordpress{ position: relative; top: calc(var(--pos-2)*-1); }
+/* #notepad{ margin-top: var(--pos-2);} */
+#ck-editor{ margin-top: var(--pos-2);}
+#git{ position: relative; top: calc(var(--pos-2)*-1); }
+/* #pandoc{ margin-top: var(--pos-2);} */
+#fossil{ margin-top: var(--pos-2);}
+#scrivener{ margin-top: var(--pos-3);}
+#etherpad{ margin-top: var(--pos-2);}
+#e-text{ margin-top: var(--pos-3);}
+#libreoffice{ position: relative; top: calc(var(--pos-2)*-1); }
+#ascii-doctor{ position: relative; top: calc(var(--pos-2)*-1); }
+#brackets{ position: relative; top: calc(var(--pos-2)*-1); }
+
+
+/* web based technology */
+#wym-editor{ margin-top: var(--pos-2);}
+#google-docs{ margin-top: var(--pos-3);}
+#zotero{ margin-top: var(--pos-4);}
+#code-mirror{ margin-top: var(--pos-5);}
+#github{ margin-top: var(--pos-2);}
+#antenna-house{ margin-top: var(--pos-3);}
+#google-fonts{ margin-top: var(--pos-4);}
+#blue-griffon{ margin-top: var(--pos-6);}
+#fatpaint{ margin-top: var(--pos-7);}
+#ace{ margin-top: var(--pos-8);}
+#gitlab{ margin-top: var(--pos-2);}
+#phantomjs{ margin-top: var(--pos-3);}
+#wkhtmltopdf{ position: relative; top: calc(var(--pos-4)*-1); }
+
+#bookjs{ margin-top: var(--pos-2);}
+#prince{ margin-top: var(--pos-2); }
+#ghost{ margin-top: var(--pos-3);}
+#atom{ margin-top: var(--pos-2);}
+#html2print{ margin-top: var(--pos-4);}
+#pwa{ position: relative; top: calc(var(--pos-2)*-1); }
+
+#visual-studio{ margin-top: var(--pos-3);}
+
+#vivliostyle{ position: relative; top: calc(var(--pos-4)*-1); }
+#weasyprint{ margin-top: var(--pos-5);}
+/* #readium-js{ position: relative; top: calc(var(--pos-2)*-1); } */
+#substance{ margin-top: var(--pos-2);}
+#wax{ margin-top: var(--pos-3);}
+#idyll{ margin-top: var(--pos-4);}
+#paged-js{ position: relative; top: calc(var(--pos-2)*-1); }
+
+
+/* formats */
+#basic{ position: relative; top: calc((var(--pos-2) + var(--baseline))*-1); }
+#gml{ margin-top: var(--pos-2);}
+#jis-x{ margin-top: var(--pos-3);}
+#jpeg{ margin-top: var(--pos-2);}
+#metafont{ margin-top: var(--pos-3);}
+#interpress{ margin-top: var(--pos-4);}
+#postscript-2{ margin-top: var(--pos-5);}
+#ppd{ margin-top: var(--pos-6);}
+
+#sgml{ margin-top: var(--pos-2);}
+#sql{ margin-top: var(--pos-3);}
+#tiff{ margin-top: var(--pos-4);}
+
+#rtf{ margin-top: var(--pos-5);}
+#gif{ margin-top: var(--pos-7);}
+#open-document-architecture{ position: relative; top: calc(var(--pos-2)*-1); }
+#unicode{ position: relative; top: calc(var(--pos-3)*-1); }
+#truetype{ margin-top: var(--pos-2);}
+#docbook{ margin-top: var(--pos-3);}
+#python{ margin-top: var(--pos-4);}
+#pdf-1992{ position: relative; top: calc(var(--pos-2)*-1); }
+#metapost{ position: relative; top: calc(var(--pos-2)*-1); }
+#tei-proposal{ margin-top: var(--pos-2);}
+#dublin-core{ margin-top: var(--pos-3);}
+#php-1994{ margin-top: var(--pos-4);}
+#javascript, #ecma-script{ margin-top: var(--pos-5);}
+#opentype{ position: relative; top: calc(var(--pos-2)*-1); }
+#tei-xml{ margin-top: var(--pos-2);}
+#prism{ margin-top: var(--pos-3);}
+#om-doc{ margin-top: var(--pos-4);}
+#textile{ margin-top: var(--pos-4);}
+#relax-ng{ margin-top: var(--pos-5);}
+#cellML{ margin-top: var(--pos-6);}
+
+#restructured-text{ position: relative; top: calc(var(--pos-2)*-1); }
+
+#markdown{ margin-top: var(--pos-2);}
+
+#open-document{ margin-top: var(--pos-3);}
+#adobe-pdf-print{ margin-top: var(--pos-4);}
+#openXSP{ margin-top: var(--pos-2);}
+#microsoft-xml{ margin-top: var(--pos-5);}
+#jquery{ margin-top: var(--pos-3);}
+
+#variable-font{ margin-top: var(--pos-3);}
+
+/* W3C format */
+
+#html-working{ position: relative; top: calc(var(--pos-2)*-1); }
+#whatwg{ position: relative; top: calc(var(--pos-2)*-1); }
+#html-living{ position: relative; top: calc(var(--pos-2)*-1); }
+
+#png{ margin-top: var(--pos-2);}
+#rdf-schema{ margin-top: var(--pos-2);}
+#xslt{ margin-top: var(--pos-3);}
+#dom{ margin-top: var(--pos-4);}
+#mathML{ margin-top: var(--pos-5);}
+#wcag{ margin-top: var(--pos-6);}
+#svg{ margin-top: var(--pos-7);}
+#xml-2001{ margin-top: var(--pos-2);}
+#woff-2{ margin-top: calc(var(--pos-2) + var(--baseline));}
+
+/* html */
+#html-3{ margin-top: var(--pos-2);}
+#html-4{ margin-top: var(--pos-2);}
+
+/* css*/
+#css-1{ margin-top: var(--pos-2);}
+#css-2, #css-3{ margin-top: var(--pos-2);}
+/* #css-2-1{ margin-top: var(--pos-2);} */
+#css-casacade{ margin-top: var(--pos-2);}
+#media-queries{ position: relative; top: calc(var(--pos-3)*-1); }
+#css-font{ position: relative; top: calc(var(--pos-2)*-1); }
+#css-var{ margin-top: var(--pos-2);}
+
+/* epub */
+#oeb-1999{ margin-top: var(--pos-2);}
+#microsoft-lit{ margin-top: var(--pos-2); position: relative; left: 80px; }
+#kindle-file{ margin-top: calc(var(--baseline) + var(--pos-2));}
+#fictionbook{ margin-top: calc(var(--baseline) + var(--pos-2));}
+#publishing-w3c{ position: relative; top: calc(var(--baseline)*-4); }
