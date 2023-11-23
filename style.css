@@ -146,65 +146,69 @@ a{
     z-index: 10;
 }
 
-.section-title{ grid-column: 1; }
+.section-title { grid-column: 1; }
 .y1963 { grid-column: 2; }
 .y1964 { grid-column: 3; }
-.y196- { grid-column: 4; }
-.y1969 { grid-column: 5; }
-.y1970 { grid-column: 6; }
-.y1971 { grid-column: 7; }
-.y1972 { grid-column: 8; }
-.y1973 { grid-column: 9; }
-.y1974 { grid-column: 10; }
-.y1975 { grid-column: 11; }
-.y1976 { grid-column: 12; }
-.y1977 { grid-column: 13; }
-.y1978 { grid-column: 14; }
-.y1979 { grid-column: 15; }
-.y1980 { grid-column: 16; }
-.y1981 { grid-column: 17; }
-.y1982 { grid-column: 18; }
-.y1983 { grid-column: 19; }
-.y1984 { grid-column: 20; }
-.y1985 { grid-column: 21; }
-.y1986 { grid-column: 22; }
-.y1987 { grid-column: 23; }
-.y1988 { grid-column: 24; }
-.y1989 { grid-column: 25; }
-.y1990 { grid-column: 26; }
-.y1991 { grid-column: 27; }
-.y1992 { grid-column: 28; }
-.y1993 { grid-column: 29; }
-.y1994 { grid-column: 30; }
-.y1995 { grid-column: 31; }
-.y1996 { grid-column: 32; }
-.y1997 { grid-column: 33; }
-.y1998 { grid-column: 34; }
-.y1999 { grid-column: 35; }
-.y2000 { grid-column: 36; }
-.y2001 { grid-column: 37; }
-.y2002 { grid-column: 38; }
-.y2003 { grid-column: 39; }
-.y2004 { grid-column: 40; }
-.y2005 { grid-column: 41; }
-.y2006 { grid-column: 42; }
-.y2007 { grid-column: 43; }
-.y2008 { grid-column: 44; }
-.y2009 { grid-column: 45; }
-.y2010 { grid-column: 46; }
-.y2011 { grid-column: 47; }
-.y2012 { grid-column: 48; }
-.y2013 { grid-column: 49; }
-.y2014 { grid-column: 50; }
-.y2015 { grid-column: 51; }
-.y2016 { grid-column: 52; }
-.y2017 { grid-column: 53; }
-.y2018 { grid-column: 54; }
-.y2019 { grid-column: 55; }
-.y2020 { grid-column: 56; }
-.y2021 { grid-column: 57; }
-.y2022 { grid-column: 58; }
-.y2023 { grid-column: 59; }
+.y1965 { grid-column: 4; }
+.y1966 { grid-column: 5; }
+.y1967 { grid-column: 6; }
+.y1968 { grid-column: 7; }
+.y1969 { grid-column: 8; }
+.y1970 { grid-column: 9; }
+.y1971 { grid-column: 10; }
+.y1972 { grid-column: 11; }
+.y1973 { grid-column: 12; }
+.y1974 { grid-column: 13; }
+.y1975 { grid-column: 14; }
+.y1976 { grid-column: 15; }
+.y1977 { grid-column: 16; }
+.y1978 { grid-column: 17; }
+.y1979 { grid-column: 18; }
+.y1980 { grid-column: 19; }
+.y1981 { grid-column: 20; }
+.y1982 { grid-column: 21; }
+.y1983 { grid-column: 22; }
+.y1984 { grid-column: 23; }
+.y1985 { grid-column: 24; }
+.y1986 { grid-column: 25; }
+.y1987 { grid-column: 26; }
+.y1988 { grid-column: 27; }
+.y1989 { grid-column: 28; }
+.y1990 { grid-column: 29; }
+.y1991 { grid-column: 30; }
+.y1992 { grid-column: 31; }
+.y1993 { grid-column: 32; }
+.y1994 { grid-column: 33; }
+.y1995 { grid-column: 34; }
+.y1996 { grid-column: 35; }
+.y1997 { grid-column: 36; }
+.y1998 { grid-column: 37; }
+.y1999 { grid-column: 38; }
+.y2000 { grid-column: 39; }
+.y2001 { grid-column: 40; }
+.y2002 { grid-column: 41; }
+.y2003 { grid-column: 42; }
+.y2004 { grid-column: 43; }
+.y2005 { grid-column: 44; }
+.y2006 { grid-column: 45; }
+.y2007 { grid-column: 46; }
+.y2008 { grid-column: 47; }
+.y2009 { grid-column: 48; }
+.y2010 { grid-column: 49; }
+.y2011 { grid-column: 50; }
+.y2012 { grid-column: 51; }
+.y2013 { grid-column: 52; }
+.y2014 { grid-column: 53; }
+.y2015 { grid-column: 54; }
+.y2016 { grid-column: 55; }
+.y2017 { grid-column: 56; }
+.y2018 { grid-column: 57; }
+.y2019 { grid-column: 58; }
+.y2020 { grid-column: 59; }
+.y2021 { grid-column: 60; }
+.y2022 { grid-column: 61; }
+.y2023 { grid-column: 62; }
+
 
 
 
@@ -307,7 +311,7 @@ section.y1963{ margin-left: 5px; }
 }
 
 #section-1{
-    width: 170px;
+    width: 220px;
     margin-top: 200px;
     background-color: var(--color-3);
     color: var(--color-1);
@@ -353,7 +357,7 @@ section.y1963{ margin-left: 5px; }
 /* Style for timeline element  ---------------------------------------------------------- */
 
 article {
-    width: 600px;
+    width: 240px;
     padding-left: calc(var(--baseline)*1);
     z-index: 100;
 }
@@ -423,7 +427,52 @@ article h2::before{
 --pos-7: calc(var(--baseline)*12 + var(--margin)*6);
 --pos-8: calc(var(--baseline)*14 + var(--margin)*7);
 }
+/* Web platforms */
 
+#picasa{ margin-top: var(--pos-2);}
+#linkedin{ margin-top: var(--pos-3);}
+#myspace{ margin-top: var(--pos-4);}
+#delicious{ margin-top: var(--pos-5);}
+#facebook{ margin-top: var(--pos-2);}
+#tiddlywiki{ margin-top: var(--pos-3);}
+#flickr{ margin-top: var(--pos-4);}
+#reddit{ margin-top: var(--pos-4);}
+#Netvibes{ margin-top: var(--pos-5);}
+#youtube { margin-top: var(--pos-6);}
+#vk{ margin-top: var(--pos-2);}
+#behance{ margin-top: var(--pos-3);}
+#tumblr{ margin-top: var(--pos-5);}
+#SoundCloud{ margin-top: var(--pos-6);}
+#FFFFOUND{ margin-top: var(--pos-7);}
+
+#weibo{ margin-top: var(--pos-2);}
+#imgur{ margin-top: var(--pos-3);}
+#dribbble{ margin-top: var(--pos-4);}
+#whatsapp{ margin-top: var(--pos-5);}
+#pinterest{ margin-top: var(--pos-2);}
+
+#twitch{ margin-top: var(--pos-2);}
+#miro{ margin-top: var(--pos-3);}
+#snapchat{ margin-top: var(--pos-4);}
+#googleplus{ margin-top: var(--pos-5);}
+#are-na{ margin-top: var(--pos-6);}
+
+#googlekeep{ margin-top: var(--pos-6);}
+#vine{ margin-top: var(--pos-3);}
+#telegram{ margin-top: var(--pos-4);}
+#Signal{ margin-top: var(--pos-5);}
+#Figma{ margin-top: var(--pos-2);}
+#Mastodon{ margin-top: var(--pos-3);}
+#TikTok{ margin-top: var(--pos-4);}
+#Notion{ margin-top: var(--pos-5);}
+#stackoverflow{ margin-top: var(--pos-2);}
+#Slack { margin-top: var(--pos-8);}
+#Sprout { margin-top: var(--pos-6);}
+#Figjam { margin-top: var(--pos-7);}
+#igloo { margin-top: var(--pos-2);}
+#Threads { margin-top: var(--pos-3);}
+#sublimeapp { margin-top: var(--pos-4);}
+#sane { margin-top: var(--pos-6);}
 /* harware */
 #ocr{ margin-top: var(--pos-2);}
 #ibm-5100{ margin-top: var(--pos-3);}
@@ -446,14 +495,14 @@ article h2::before{
 #ipad{ margin-top: var(--pos-2);}
 #bookman{ margin-top: var(--pos-2);}
 #raspberry{ margin-top: var(--pos-3);}
-
-
+#Obsidian{ margin-top: var(--pos-2);}
+#Tlon{ margin-top: var(--pos-3);}
 /* platform */
 /* #arxiv { margin-top: calc(var(--baseline)*2);} */
-#abu { position: relative; top: calc(var(--pos-2)*-1); }
+#abu { position: relative; top: calc(var(--pos-2)*-2); }
 #website-1991 { position: relative; top: calc(var(--baseline)*-2); }
 #gallica { position: relative; top: calc(var(--pos-2)*-1); }
-#wayback-machine { margin-top: var(--pos-2);}
+#wayback-machine { margin-top: var(--pos-3);}
 #lulu { position: relative; top: calc(var(--pos-2)*-1); }
 #google-books { margin-top: var(--pos-2);}
 #oca { margin-top: var(--pos-2);}
@@ -467,9 +516,10 @@ article h2::before{
 /* software-browser */
 #hyper-card { margin-top: var(--pos-2);}
 #line-mode { margin-top: var(--pos-2);}
-#viola { margin-top: var(--pos-3);}
+#weblog { margin-top: var(--pos-2);}
+#viola { margin-top: var(--pos-4);}
 #erwise { margin-top: var(--pos-4);}
-#lynx { margin-top: var(--pos-5);}
+#lynx { margin-top: var(--pos-6);}
 #arena { margin-top: var(--pos-6);}
 #netscape { margin-top: var(--pos-3);}
 #ie-1997  { margin-top: var(--pos-2);}
@@ -477,8 +527,8 @@ article h2::before{
 #konqueror, #konqueror-khtml { margin-top: var(--pos-3);}
 #firefox { margin-top: var(--pos-2);}
 #opera-2005 { margin-top: var(--pos-3);}
-/* #chrome-2008 { margin-top: var(--pos-2);} */
-#chromium { margin-top: var(--pos-2);}
+#chrome-2008 { margin-top: var(--pos-1);}
+#chromium { margin-top: var(--pos-3);}
 #ie-2009{ margin-top: var(--pos-3);}
 #pale-moon{ margin-top: var(--pos-5);}
 #opera-2013{ margin-top: var(--pos-3);}
