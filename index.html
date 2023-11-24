@@ -26,7 +26,7 @@
   <meta property="og:image"
     content="https://gitlab.com/JulieBlanc/timeline-publishing/uploads/d98938f4c896b6a2020d3f40bfcb8706/timeline-publishing.png" />
   <link href="style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="fonts/ibm-plex-sans/stylesheet.css" />
+  <link rel="stylesheet" href="fonts/stylesheet.css" />
   <script type="text/javascript" src="cssGrid.js"></script>
 
 </head>
@@ -40,7 +40,7 @@
   <section id="credits">
     <h1>Timeline of technologies and services for online creative research (1963-2023)</h1>
     <div>
-      Based on Julie Blanc's <a target="_blank" href="http://recherche.julie-blanc.fr/timeline-publishing/">Timeline of
+      <a target="_blank" href="http://recherche.julie-blanc.fr/timeline-publishing/">Based on Julie Blanc's Timeline of
         technologies for publishing (1963-2018)</a>
       <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licence Creative Commons"
           style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
@@ -50,6 +50,10 @@
 
 
   <section id="timeline">
+    <section class="grid-row grid-row-1"></section>
+    <section class="grid-row grid-row-2"></section>
+    <section class="grid-row grid-row-3"></section>
+    <section class="grid-row grid-row-4"></section>
 
     <section class="section-title" id="section-1">
       <h1>Hypertext and digital archives</h1>
@@ -60,9 +64,9 @@
     <section class="section-title" id="section-3">
       <h1>Web platforms</h1>
     </section>
-    <section class="section-title" id="section-4">
+    <!-- <section class="section-title" id="section-4">
       <h1>Softwares and systems for text</h1>
-    </section>
+    </section> -->
     <!-- <section class="section-title" id="section-5">
       <h1>Web-based technologies</h1>
     </section> -->
@@ -74,19 +78,13 @@
     <!-- hardware ___________________________________________________________________________
         ________________________________________________________________________________________________
         ________________________________________________________________________________________________ -->
-    <article class="section-hardware y1965">
+    <article class="section-hardware y1965" id="hypertext">
       <h2>
         <a href="https://en.wikipedia.org/wiki/Hypertext">Hypertext (Ted Nelson)</a>
       </h2>
       <p>First published reference</p>
     </article>
 
-    <article class="section-hardware y1965">
-      <h2>
-        <a href="https://en.wikipedia.org/wiki/Hypertext">Hypertext (Ted Nelson)</a>
-      </h2>
-      <p>First published reference</p>
-    </article>
 
 
 
@@ -101,10 +99,14 @@
       </h2>
       <p>Digital library of books</p>
     </article>
-
-    <article class="section-platform y1991 web" id="website-1991">
-      <h2>First website (Tim Berners-Lee)</h2>
+    <article class="section-platform open y1991" id="website-1991">
+      <h2>
+        <a href="https://info.cern.ch/hypertext/WWW/TheProject.html">First website</a>
+      </h2>
+      <p>CERN, Geneva (Tim Berners-Lee)</p>
     </article>
+    
+
 
     <article class="section-platform y1991" id="arxiv">
       <h2>
@@ -143,13 +145,13 @@
         <p>Nonprofit digital library</p>
       </article>
     </section>
-
-    <article class="section-platform y1997 web" id="weblog">
-      <h2>First weblog</h2>
-      <p>
-        <em>The Robot Wisdom Weblog</em>, Jorn Barger
-      </p>
+    <article class="section-platform web y1997" id="weblog">
+      <h2>
+        <a href="https://info.cern.ch/hypertext/WWW/TheProject.html">First weblog</a>
+      </h2>
+      <p><em>The Robot Wisdom Weblog</em>, Jorn Barger</p>
     </article>
+    
 
     <article class="section-platform y1997" id="gallica">
       <h2>

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'OCRXReg';
+    src: url('OCR-X-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'OCRXBold';
+    src: url('OCR-X-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
