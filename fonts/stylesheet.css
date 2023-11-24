@@ -7,8 +7,8 @@
 
 
 @font-face {
-    font-family: 'OCRXBold';
-    src: url('OCR-X-Bold.otf');
-    font-weight: bold;
+    font-family: 'OCRXMed';
+    src: url('OCR-X-Medium.otf');
+    font-weight: 500;
     font-style: normal;
 }

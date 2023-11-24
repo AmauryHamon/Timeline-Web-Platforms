@@ -2,7 +2,7 @@
 
 :root{
     --font: 'OCRXReg', helvetica, sans-serif;
-    --font-title: 'OCRXBold', helvetica, sans-serif;
+    --font-title: 'OCRXMed', helvetica, sans-serif;
     --line-height: 16px;
     --baseline: 20px;
     --margin: 20px;
@@ -417,6 +417,20 @@ article h2::before{
     padding-right: 0px;
 }
 
+article.important{
+    /* color: var(--color-2); */
+
+}
+article.important p{
+    font-family: var(--font-title);
+}
+
+article.important h2 a{
+    font-family: var(--font-title);
+    text-transform: uppercase;
+
+}
+
 /* .typo h2::before{
     content: "▃"!important;
 }
@@ -454,6 +468,7 @@ article h2::before{
 --pos-6: calc(var(--baseline)*10 + var(--margin)*5);
 --pos-7: calc(var(--baseline)*12 + var(--margin)*6);
 --pos-8: calc(var(--baseline)*14 + var(--margin)*7);
+--pos-9: calc(var(--baseline)*16 + var(--margin)*8);
 }
 /* Web platforms */
 
@@ -478,7 +493,7 @@ article h2::before{
 #dribbble{ margin-top: var(--pos-3);}
 #whatsapp{ margin-top: var(--pos-5);}
 #pinterest{ margin-top: var(--pos-3);}
-
+#appstore{ margin-top: calc(var(--pos-2)*-2) ;}
 #twitch{ margin-top: var(--pos-2);}
 #miro{ margin-top: var(--pos-3);}
 #snapchat{ margin-top: var(--pos-4);}
@@ -490,7 +505,7 @@ article h2::before{
 #telegram{ margin-top: var(--pos-4);}
 #Signal{ margin-top: var(--pos-5);}
 #Figma{ margin-top: var(--pos-3);}
-#Mastodon{ margin-top: var(--pos-1);}
+#Mastodon{ margin-top: var(--pos-9);}
 #TikTok{ margin-top: var(--pos-2);}
 #Notion{ margin-top: var(--pos-7);}
 #stackoverflow{ margin-top: var(--pos-2);}
@@ -529,6 +544,7 @@ article h2::before{
 #Tlon{ margin-top: var(--pos-3);}
 /* platform */
 /* #arxiv { margin-top: calc(var(--baseline)*2);} */
+#internet{ margin-top: calc(var(--pos-2)*-2);}
 #abu { position: relative; top: calc(var(--pos-2)*-2); }
 #website-1991 { margin-top: calc(var(--pos-2)*-1); }
 #gallica { position: relative; top: calc(var(--pos-2)*-2); }
@@ -537,12 +553,13 @@ article h2::before{
 #google-books { margin-top: calc(var(--pos-2)*-2) ;}
 #oca { margin-top: var(--pos-2);}
 #scribd{ margin-top: var(--pos-2);}
-
+#wikisource { margin-top: calc(var(--pos-2)*-2);}
 #europeana { position: relative; top: calc(var(--pos-3)*-1); }
 #hathi { position: relative; top: calc(var(--pos-2)*-1); }
 #wikipedia { margin-top: calc(var(--pos-2)*-2);}
 #projet-gutenberg { margin-top: var(--pos-1);}
 #Trello {margin-top: var(--pos-5);}
+#caulfield { margin-top: calc(var(--pos-2)*-2);}
 /* software-browser */
 #hypertext{ margin-top: var(--pos-2);}
 #hyper-card { margin-top: var(--pos-1);}
@@ -676,7 +693,7 @@ article h2::before{
 #ghost{ margin-top: var(--pos-3);}
 #atom{ margin-top: var(--pos-2);}
 #html2print{ margin-top: var(--pos-4);}
-#pwa{ position: relative; top: calc(var(--pos-2)*-1); }
+#pwa{ position: relative; top: calc(var(--pos-1)*-1); }
 
 #visual-studio{ margin-top: var(--pos-3);}
 
