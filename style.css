@@ -510,14 +510,17 @@ article.important h2 a{
 #Notion{ margin-top: var(--pos-7);}
 #stackoverflow{ margin-top: var(--pos-2);}
 #Slack { margin-top: var(--pos-8);}
-#Sprout { margin-top: var(--pos-6);}
-#Figjam { margin-top: var(--pos-7);}
+#Sprout { margin-top: var(--pos-2);}
+#Figjam { margin-top: var(--pos-3);}
 #igloo { margin-top: var(--pos-1);}
 #posts { margin-top: var(--pos-4);}
 #Threads { margin-top: var(--pos-3);}
-#sublimeapp { margin-top: var(--pos-6);}
-#sane { margin-top: var(--pos-8);}
-#readcv { margin-top: var(--pos-5);}
+#sublimeapp { margin-top: var(--pos-2);}
+#sane { margin-top: var(--pos-6);}
+#kosmik { margin-top: var(--pos-8);}
+#readcv { margin-top: var(--pos-1);}
+#flim { margin-top: var(--pos-8);}
+#flimai { margin-top: var(--pos-4);}
 /* harware */
 #ocr{ margin-top: var(--pos-2);}
 #ibm-5100{ margin-top: var(--pos-3);}
@@ -694,7 +697,7 @@ article.important h2 a{
 #atom{ margin-top: var(--pos-2);}
 #html2print{ margin-top: var(--pos-4);}
 #pwa{ position: relative; top: calc(var(--pos-1)*-1); }
-
+#quartz{ margin-top: var(--pos-3);}
 #visual-studio{ margin-top: var(--pos-3);}
 
 #vivliostyle{ position: relative; top: calc(var(--pos-4)*-1); }
