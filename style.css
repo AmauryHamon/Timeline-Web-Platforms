@@ -499,12 +499,18 @@ article.important h2 a{
 #snapchat{ margin-top: var(--pos-4);}
 #googleplus{ margin-top: var(--pos-5);}
 #are-na{ margin-top: var(--pos-6);}
-
+#polite{ margin-top: var(--pos-2);}
+#technorati{ margin-top: var(--pos-3);}
+#lastfm{ margin-top: var(--pos-5);}
+#digg{ margin-top: var(--pos-5);}
 #googlekeep{ margin-top: var(--pos-6);}
 #vine{ margin-top: var(--pos-3);}
 #telegram{ margin-top: var(--pos-4);}
+#feedburner{ margin-top: var(--pos-6);}
 #Signal{ margin-top: var(--pos-5);}
 #Figma{ margin-top: var(--pos-3);}
+#odeo{ margin-top: var(--pos-5);}
+#Bebo{ margin-top: var(--pos-7);}
 #Mastodon{ margin-top: var(--pos-9);}
 #TikTok{ margin-top: var(--pos-2);}
 #Notion{ margin-top: var(--pos-7);}
