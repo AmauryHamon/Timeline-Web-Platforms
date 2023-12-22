@@ -596,7 +596,7 @@ article.important h2 a{
 #edge, #quantum{ position: relative; top: calc(var(--pos-1)); }
 #beaker{ margin-top: var(--pos-3);}
 #vivaldi{ margin-top: var(--pos-4);}
-
+#cosmos { margin-top: var(--pos-9);}
 
 /* software ebook */
 #acrobat-reader{ margin-top: var(--pos-2);}
@@ -797,3 +797,5 @@ article.important h2 a{
 #kindle-file{ margin-top: calc(var(--baseline) + var(--pos-2));}
 #fictionbook{ margin-top: calc(var(--baseline) + var(--pos-2));}
 #publishing-w3c{ position: relative; top: calc(var(--baseline)*-4); }
+
+/* media queries for mobile */
